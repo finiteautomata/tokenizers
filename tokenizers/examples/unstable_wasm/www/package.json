@@ -8,13 +8,18 @@
     },
     "scripts": {
         "build": "webpack --config webpack.config.js",
-        "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server"
+        "start": "webpack-dev-server"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/rustwasm/create-wasm-app.git"
     },
-    "keywords": ["webassembly", "wasm", "rust", "webpack"],
+    "keywords": [
+        "webassembly",
+        "wasm",
+        "rust",
+        "webpack"
+    ],
     "author": "Ashley Williams <ashley666ashley@gmail.com>",
     "license": "(MIT OR Apache-2.0)",
     "bugs": {
@@ -28,6 +33,6 @@
         "webpack-dev-server": "^3.1.5"
     },
     "dependencies": {
-        "unstable_wasm": "file:../pkg"
+        "hf-tokenizers-wasm": "file:../pkg"
     }
 }
