@@ -1,3 +1,4 @@
+const fs = require("fs");
 import { TokenizerWasm } from "hf-tokenizers-wasm";
 
 class Tokenizer {
@@ -18,6 +19,7 @@ class Tokenizer {
 
 async function main() {
     let tokenizer = await Tokenizer.from_pretrained("gpt2");
+
     let encoding = tokenizer.encode("I love AI and privacy", false);
     console.log(encoding.input_ids);
     console.log(document);

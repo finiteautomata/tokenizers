@@ -48,6 +48,11 @@ impl EncodingWasm {
         self.encoding.get_attention_mask().into()
     }
 
+    #[wasm_bindgen(method, getter = offsets)]
+    pub fn get_offsets(&self) -> js_sys::Array {
+        self.encoding.get_offsets().iter().map(|x| (x.0, x.1)).collect()
+    }
+
     #[wasm_bindgen(method, getter = tokens)]
     pub fn get_tokens(&self) -> js_sys::Array {
         self.encoding.get_tokens().iter().map(|x|{
